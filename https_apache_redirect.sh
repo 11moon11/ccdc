@@ -8,22 +8,20 @@ then
    exit 1
 fi
 
-echo "enter host (ex: ecomm):"
-Read $h
+read -p "enter host (ex: ecomm): " h
 #
 #
-Echo
-Echo "enter domain (ex: ccdc.com):"
-Read $d
+read -p "enter domain (ex: ccdc.com): " d
 #
 #
-Echo
-Echo "enter ip addr:"
-Read $ip
+read -p "enter ip addr: " ip
 #
 #######
 #
-cat << EOF >> /etc/httpd/conf/httpd.com 
+
+echo "Setting host to: $h.$d"
+
+cat << EOF >> /etc/httpd/conf/httpd.conf 
 NameVirtualHost *:80
 <VirtualHost *:80>
    ServerName $h.$d
