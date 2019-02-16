@@ -106,10 +106,13 @@ add_in() {
 }
 
 # SSH
+add_in tcp 22022
 #iptables -A INPUT -p tcp --dport 22022 -m state --state NEW,ESTABLISHED -j ACCEPT
 #iptables -A OUTPUT -p tcp --sport 22022 -m state --state ESTABLISHED -j ACCEPT
 
 # DNS
+#add_in udp 53
+#add_in tcp 53
 #iptables -A INPUT -p udp --dport 53 -m state --state NEW,ESTABLISHED -j ACCEPT
 #iptables -A OUTPUT -p udp --sport 53 -m state --state ESTABLISHED -j ACCEPT
 ##iptables -A INPUT -p tcp --dport 53 -m state --state NEW,ESTABLISHED -j ACCEPT
