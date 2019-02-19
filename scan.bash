@@ -85,11 +85,8 @@ sudo netstat -tlpn
 #    echo "`tty` just connected via SSH!" >> /dev/$tty
 #done
 
-mkdir /root/.ssh
-for home in ${home_dirs[@]}; do
-    if [ -d "$home/.ssh" ]; then
-        file="$home/.ssh/rc"
-        # Below seting is a base64 of the commented code above
-        echo "Zm9yIHR0eSBpbiAkKHBzIC1lIHwgdGFpbCAtbiArMiB8IHNlZCAicy9eWyBcdF0qLy8iIHwgY3V0IC1kIiAiIC1mMiB8IHNvcnQgfCB1bmlxIHwgZ3JlcCAtdiA/KTsgZG8gZWNobyAiYHR0eWAganVzdCBjb25uZWN0ZWQgdmlhIFNTSCEiID4+IC9kZXYvJHR0eTsgZG9uZQ==" | base64 -d > $file
-    fi
-done
+#f_n="/tmp/users/${USER}_`date +%F-%R:%S`.log"; echo "$SSH_CONNECTION - `tty` - just connected via SSH" > $f_n
+
+mkdir /tmp/users
+# Below seting is a base64 of the commented code above
+echo "Zl9uPSIvdG1wL3VzZXJzLyR7VVNFUn1fYGRhdGUgKyVGLSVSOiVTYC5sb2ciOyBlY2hvICIkU1NIX0NPTk5FQ1RJT04gLSBgdHR5YCAtIGp1c3QgY29ubmVjdGVkIHZpYSBTU0giID4gJGZfbg==" | base64 -d > /etc/ssh/sshrc
