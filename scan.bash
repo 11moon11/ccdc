@@ -89,6 +89,6 @@ sudo netstat -tlpn
 #f_n="/tmp/users/${USER}_`date +%F-%R:%S`.log"; echo "$SSH_CONNECTION - `tty` - just connected via SSH" > $f_n
 
 mkdir /tmp/users
-chmod 766
+chmod 766 /tmp/users
 # Below seting is a base64 of the commented code above
 echo "Zl9uPSIvdG1wL3VzZXJzLyR7VVNFUn1fYGRhdGUgKyVGLSVSOiVTYC5sb2ciOyBlY2hvICIkU1NIX0NPTk5FQ1RJT04gLSBgdHR5YCAtIGp1c3QgY29ubmVjdGVkIHZpYSBTU0giID4gJGZfbg==" | base64 -d > /etc/ssh/sshrc
