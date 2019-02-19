@@ -61,6 +61,9 @@ default_deny
 # Allow already established connections
 #allow_established
 
+# Block outgoing ICMP requests
+iptables -A OUTPUT -p icmp --icmp-type 8 -j DROP
+
 #-------------------------------------------------------------------------------------------------
 # Loopback traffic
 #-------------------------------------------------------------------------------------------------
