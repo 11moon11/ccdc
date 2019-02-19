@@ -79,7 +79,7 @@ done
 sudo netstat -tlpn
 
 # ====================================================
-# ================== Notify On SSH
+# ================== Notify On SSH  ==================
 
 #for tty in $(ps -e | tail -n +2 | sed "s/^[ \t]*//" | cut -d" " -f2 | sort | uniq | grep -v ?); do
 #    echo "`tty` just connected via SSH!" >> /dev/$tty
