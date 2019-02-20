@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Good directories to monitor:
+# /tmp/
+# /etc/
+# /home/user/.shh/
+
 rec() { 
     local dir="`realpath $1`"
     local dest="$backup_dir$dir"
@@ -94,7 +99,7 @@ rec() {
 } 
 
 usage() {
-    echo "Usage: $0 [-rd yes/no] [-f infile1] [-f infile2] ..."
+    echo "Usage: sudo $0 [-rd yes/no] [-f infile1] [-f infile2] ..."
     echo "  -d        Delete all backed up files (default: no)"
     echo "  -r        Enable recovery mode (default: no)"
     echo "  -f        Folder/File to backup"

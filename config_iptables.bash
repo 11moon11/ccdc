@@ -43,7 +43,8 @@ then
 	exit 1
 fi
 
-network="10.0.10.1/25"
+network="172.20.240.1/24"
+echo "Using following network: $network"
 #prot="$(netstat -tln | tr -s ' ' | egrep "(tcp|udp) " | cut -d' ' -f1)"
 #port="$(netstat -tln | tr -s ' ' | egrep "(tcp|udp) " | cut -d' ' -f4 | cut -d':' -f2)"
 
