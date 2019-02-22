@@ -5,5 +5,4 @@ if [ $# -lt 1 ]; then
 	exit 0
 fi
 
-for u in $(wbinfo -u); do mkdir /home/$1/$u; chown $u:"Domain Users" /home/$1/$u; done
-
+for u in $(wbinfo -u); do mkdir -p /home/$1/$u; chown $u:"Domain Users" /home/$1/$u; done
